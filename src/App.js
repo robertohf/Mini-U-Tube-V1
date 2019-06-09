@@ -3,7 +3,6 @@ import { BrowserRouter } from 'react-router-dom'
 import YTSearch from 'youtube-api-search'
 import VideoList from './components/dashboard/VideoList'
 import VideoDetail from './components/dashboard/VideoDetail';
-import NavBar from './components/layout/NavBar';
 import SearchBar from './components/dashboard/SearchBar'
 
 const API_KEY = process.env.REACT_APP_API_KEY

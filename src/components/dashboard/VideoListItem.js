@@ -8,7 +8,7 @@ function VideoListItem(props) {
     return (
         <li onClick={ () => onUserSelected(video) } className="list-group-items">
             <div className="video-list media">
-                <div className="media-left">
+                <div className="media-right">
                     <img className="media-object" src={ imgUrl } />
                 </div>
                 <div className="media-body">
