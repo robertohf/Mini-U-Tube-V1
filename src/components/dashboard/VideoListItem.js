@@ -13,7 +13,7 @@ function VideoListItem(props) {
                     <img className="media-object" src={ imgUrl } alt={ video.snippet.title } width="150px" height="100px" />
                 </div>
                 <div className="media-body">
-                    <div className="media-heading">{ video.snippet.title }</div>
+                    <div className="media-heading"><h4>{ video.snippet.title }</h4></div>
                 </div>
             </div>
         </ListItem>
