@@ -4,7 +4,7 @@ import YTSearch from 'youtube-api-search'
 import VideoList from './components/dashboard/VideoList'
 import VideoDetail from './components/dashboard/VideoDetail';
 import SearchBar from './components/dashboard/SearchBar'
-import GoogleLogin from 'react-google-login'
+import NavBar from './components/layout/NavBar'
 
 const API_KEY = process.env.REACT_APP_API_KEY
 
@@ -31,8 +31,6 @@ class App extends Component {
   
 
   render() {
-
-
     return (
       <BrowserRouter>
         <NavBar />

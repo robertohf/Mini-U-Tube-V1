@@ -1,4 +1,5 @@
 import React from 'react'
+import { ListItem } from '@material-ui/core';
 
 function VideoListItem(props) {
     const video = props.video;
@@ -6,16 +7,16 @@ function VideoListItem(props) {
     const imgUrl = video.snippet.thumbnails.default.url
 
     return (
-        <li onClick={ () => onUserSelected(video) } className="list-group-items">
+        <ListItem onClick={ () => onUserSelected(video) } className="list-group-items">
             <div className="video-list media">
                 <div className="media-right">
-                    <img className="media-object" src={ imgUrl } />
+                    <img className="media-object" src={ imgUrl } alt={ video.snippet.title } width="150px" height="100px" />
                 </div>
                 <div className="media-body">
                     <div className="media-heading">{ video.snippet.title }</div>
                 </div>
             </div>
-        </li>
+        </ListItem>
     )
 }
 

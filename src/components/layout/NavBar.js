@@ -1,5 +1,5 @@
 import React from 'react'
-import { fade, makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
@@ -24,6 +24,13 @@ function NavBar() {
       console.log(response);
     }
     
+    let refreshTime = () => {
+      var dateString = new Date().toLocaleString("en-US", {timeZone: "America/Tegucigalpa"});
+      document.getElementById("time").innerHTML = dateString.replace(", ", " - ");
+    }
+    
+    setInterval(refreshTime, 1000);
+
     return (
       <div className={classes.grow}>
         <AppBar position="static" style={{ backgroundColor: '#F41C1C' }}>
@@ -31,16 +38,25 @@ function NavBar() {
             <Typography className={classes.title} variant="h6" noWrap>
               Mini UTube
             </Typography>
+            <div className="minutes-hours" style={{
+                display: 'flex',
+                alignItems: 'center',
+                marginLeft: '40%',
+            }}>
+              <Typography variant="h6">
+              <p id="time"></p>
+              </Typography>
+            </div>
             <div className={classes.grow} />
               <div className={classes.sectionDesktop}>
-                  <GoogleLogin
-                    clientId= "329979726216-sg2ej8obkls897g1de7e80q4vilk8fse.apps.googleusercontent.com"
-                    buttonText="LOGIN WITH GOOGLE"
-                    onSuccess={responseGoogle}
-                    onFailure={responseGoogle}
-                  />
+                <GoogleLogin
+                  clientId= "1077692023870-5qb4ln0t1oh0qpd9q5d69gqkq8ckbspk.apps.googleusercontent.com"
+                  buttonText="LOGIN WITH GOOGLE"
+                  onSuccess={responseGoogle}
+                  onFailure={responseGoogle}
+                />
               </div>
-            </Toolbar>
+          </Toolbar>
         </AppBar>
       </div>
     )
