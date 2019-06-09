@@ -50,11 +50,11 @@ const useStyles = makeStyles(theme => ({
       color: 'inherit',
     },
     inputInput: {
-      padding: theme.spacing(1, 1, 1, 10),
+      padding: theme.spacing(1, 24, 1, 7),
       transition: theme.transitions.create('width'),
       width: '100%',
       [theme.breakpoints.up('md')]: {
-        width: 200,
+        width: 370,
       },
     },
     sectionDesktop: {
