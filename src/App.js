@@ -5,6 +5,7 @@ import VideoList from './components/dashboard/VideoList'
 import VideoDetail from './components/dashboard/VideoDetail';
 import NavBar from './components/layout/NavBar';
 import SearchBar from './components/dashboard/SearchBar'
+import GoogleLogin from 'react-google-login'
 
 const API_KEY = process.env.REACT_APP_API_KEY
 
@@ -28,9 +29,14 @@ class App extends Component {
     })
   }
 
+  
+
   render() {
+
+
     return (
       <BrowserRouter>
+        <NavBar />
         <div className="App">
           <SearchBar onSearchTermChange={ (searchTerm) => this.videoSearch(searchTerm) }/>
           <VideoDetail video={ this.state.selectedVideo }/>
