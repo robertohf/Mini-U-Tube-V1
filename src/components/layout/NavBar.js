@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
       display: 'none',
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('lg')]: {
         display: 'block',
       },
     },
@@ -24,27 +24,26 @@ function NavBar() {
       console.log(response);
     }
     
-    let refreshTime = () => {
+    let refreshDateTime = () => {
       var dateString = new Date().toLocaleString("en-US", {timeZone: "America/Tegucigalpa"});
       document.getElementById("time").innerHTML = dateString.replace(", ", " - ");
     }
     
-    setInterval(refreshTime, 1000);
+    setInterval(refreshDateTime, 1000);
 
     return (
       <div className={classes.grow}>
         <AppBar position="static" style={{ backgroundColor: '#F41C1C' }}>
-          <Toolbar>
-            <Typography className={classes.title} variant="h6" noWrap>
-              Mini UTube
-            </Typography>
-            <div className="minutes-hours" style={{
-                display: 'flex',
-                alignItems: 'center',
-                marginLeft: '40%',
-            }}>
-              <Typography variant="h6">
-              <p id="time"></p>
+          <Toolbar >
+            <div>
+              <Typography className={classes.title} variant="h6" noWrap>
+                Mini UTube
+              </Typography>
+            </div>
+            <div className={classes.grow} />
+            <div>
+              <Typography variant="h6" noWrap>
+                <p id="time"></p>
               </Typography>
             </div>
             <div className={classes.grow} />

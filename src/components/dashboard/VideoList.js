@@ -3,12 +3,9 @@ import VideoListItem from './VideoListItem'
 import { List } from '@material-ui/core';
 
 const videoContainer = {
-    display: 'flex',
-    flexDirection: 'row',
+    display: 'content',
     padding: '25px',
     textAlign: 'center',
-    borderRight: '5px', 
-    borderRadius: '4px'
   };
 
 function VideoList(props) {
@@ -20,7 +17,7 @@ function VideoList(props) {
                 )
     })
 
-    return ( <List style={videoContainer}>{ items }</List> )
+    return ( <List style={{display: 'flex', textAlign: 'center'}}>{ items }</List> )
 }
 
 export default VideoList

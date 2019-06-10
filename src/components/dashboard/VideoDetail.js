@@ -16,7 +16,7 @@ function VideoDetail(props){
             <div className="embed-responsive" style={{textAlign: 'center', backgroundColor: 'silver'}}>
                 <iframe className="embed-responsive-item" src={ url } width="600" height="400" title={ video.snippet.title } ></iframe>
             </div>
-            <div className="details" width="600" height="400">
+            <div className="details" style={{textAlign: 'center'}} width="600" height="400">
                 <div><h4>{ video.snippet.title }</h4></div>
                 <div>{ video.snippet.description }</div>
             </div>
